@@ -15,3 +15,11 @@ const person = {
 
 //jawaban
 alert(person.firstName);
+
+//section 4 tugas 7
+const x = 7;
+const y = 5;
+
+if (x > y) {
+    console.log('Horee saya bisa!')
+}
