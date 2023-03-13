@@ -5,13 +5,12 @@ describe('My first Test', () => {
 
         //cy.pause()
 
-        cy.contains('type').click() 
-
-        //should be on a new URL which includes '/commands/actions'
-        cy.url().should('include', '/commands/utilities');
-        //get an input, type into it and verify that the values has been updated
+        cy.contains('type').click();
+       // cy.wait(2000);
+        cy.url().should('include', '/commands/actions');
+        
         cy.get('.action-email')
-          .type('dummy@email.com')
-          .should('have.value', 'dummy@email.com')
+          .type('fake@email.com')
+          .should('have.value', 'fake@email.com')
     })
 })
