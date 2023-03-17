@@ -7,13 +7,13 @@ describe('Visit Saucedemo website', () => {
     })
 
 
-    it('Should fill username', () => {
-        cy.get("#user-name").should('be.visible').clear().type('standard_user')
-    });
+    // it('Should fill username', () => {
+    //     cy.get("#user-name").should('be.visible').clear().type('username')
+    // });
 
-    it('Should fill password', () => {
-        cy.get('input[name="password"]').clear().type('secret_sauce')
-    });
+    // it('Should fill password', () => {
+    //     cy.get('input[name="password"]').clear().type('password')
+    // });
 
     it('Should try to login', () => {
         cy.fixture("user").then(user => {
@@ -30,6 +30,15 @@ describe('Visit Saucedemo website', () => {
         })
     });
 
+    // it('add a product to cart', () => {
+    //     cy.fixture("add_cart").then(product => {
+    //         const buttonId = product.buttonId
+    //         const quantity = product.quantity
+
+    //         cy.contains(`[data-test="${buttonId}"]`).click();
+    //         cy.get('.shopping_cart_badge').should('have.text', quantity.toString())
+    //     })
+    // });
 
     it('Logs the user out', () => {
         cy.fixture("logout").then((logout) => {
