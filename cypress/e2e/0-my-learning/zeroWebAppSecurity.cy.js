@@ -40,7 +40,7 @@ describe('Browser actions', () => {
 
     it('Should click Online banking Button', () => {
         cy.get('#onlineBankingMenu').click()
-    });
+    }); 
 
     it('Should click Pay Bills button', () => {
         cy.get('#pay_bills_link').should('be.visible').click()
@@ -48,7 +48,7 @@ describe('Browser actions', () => {
 
     //custom commands
     it('Should fill in payment details', () => {
-        cy.fillPaymentDetails('bofa', '2', '100000', '2023/03/17', 'Saving for this month') 
+        cy.fillPaymentDetails('bofa', '1', '100000', '2023/03/17', 'Test fill blank column') 
     })
 
 

@@ -23,3 +23,26 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('fillPaymentDetails', (payee, account, amount, description) => {
+  cy.clearCookies()
+  cy.clearLocalStorage()
+
+  const today = new Date()
+  const day = today.getDate()
+
+  cy.get('#sp_payee').select(payee).should('have.value', payee)
+        cy.get('#sp_account').select(account).should('have.value', account)
+        cy.get('#sp_amount').type(amount)
+
+        cy.get('#sp_date').click({ force: true });
+        cy.get('.ui-datepicker-calendar')
+          .find('a.ui-state-default')
+          .should('be.visible')
+          .contains(day.toString())
+          .click({ force: true });
+
+        cy.get('#sp_description').type(description)
+
+        cy.get('#pay_saved_payees').click()
+});

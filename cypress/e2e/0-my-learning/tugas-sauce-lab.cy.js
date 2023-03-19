@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 
 
+
 describe('Visit Saucedemo website', () => {
     it("Visit the website", () => {
         cy.visit('https://www.saucedemo.com/')
