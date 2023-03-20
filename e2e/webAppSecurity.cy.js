@@ -33,6 +33,23 @@ describe('Login logout test', () => {
         });
     })
 
+//Below is task section 5
+    
+// it('Should show the result page', () => {
+//     cy.visit('http://zero.webappsecurity.com/search.html?searchTerm=online')
+//     cy.wait(2000)
+//     cy.get('h2').should('contain.text', 'Search Results:')
+// });
 
+// it('Should click Zero Free access to Online banking', () => {
+// cy.visit('http://zero.webappsecurity.com/online-banking.html')
+// cy.wait(2000)
+// cy.get('#pay_bills_link').click();
+
+// })
+
+// it('Should visit pay-bills page', () => {
+// cy.visit('http://zero.webappsecurity.com/bank/pay-bills.html')
+// }) 
 
 
