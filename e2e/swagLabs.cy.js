@@ -6,7 +6,7 @@ describe('Swag Labs test checkout features', () => {
     })
 
     it('Should to login with username that have been provided', () => {
-        cy.fixture('user').then(user => {
+        cy.fixture('swagLabUser').then(user => {
             const username = user.username
             const password = user.password
 
