@@ -26,7 +26,6 @@ describe('Login logout test', () => {
     
     it('Should logout from apps', () => {
             //cy.visit('http://zero.webappsecurity.com/index.html')
-
             cy.contains('username').click()
             cy.get('#logout_link').click();
             cy.get('strong').should('contain.text', 'Home')
@@ -42,9 +41,9 @@ it('Should show the result page', () => {
 });
 
 it('Should click Zero Free access to Online banking', () => {
-cy.visit('http://zero.webappsecurity.com/online-banking.html')
-cy.wait(2000)
-cy.get('#pay_bills_link').click();
+    cy.visit('http://zero.webappsecurity.com/online-banking.html')
+    cy.wait(2000)
+    cy.get('#pay_bills_link').click();
 
 })
 
