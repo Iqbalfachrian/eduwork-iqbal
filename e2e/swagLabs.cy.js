@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('Swag Labs test checkout features', () => {
+describe('Swag Labs test order features', () => {
     before(() => {
         cy.visit('https://www.saucedemo.com/')
     })
@@ -60,5 +60,12 @@ describe('Swag Labs test checkout features', () => {
     it('Should be back to Home page', () => {
         cy.contains('Back Home').click()
         cy.url().should('include', 'inventory.html')
+    });
+    
+    it('Should log out from App', () => {
+        cy.wait(2000)
+        cy.get('#react-burger-menu-btn').click()
+        cy.get('#logout_sidebar_link').click()
+        cy.url().should('include', 'saucedemo.com')
     });
 })
