@@ -1,1 +1,0 @@
-console.log("File ini sudah di merge ke master")
