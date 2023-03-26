@@ -4,7 +4,7 @@ Given('I open login page', () => {
     cy.visit('http://zero.webappsecurity.com/login.html')
 })
 
-When('I submit login ', () => {
+When('I submit login', () => {
     cy.get('#user_login').type('username');
     cy.get('#user_password').type('password');
     cy.contains('Sign in').click();

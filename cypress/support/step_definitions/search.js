@@ -1,13 +1,15 @@
+import searchPage from '../../e2e/pages/search.page';
+
 const { Given,  When, Then } = require('@badeball/cypress-cucumber-preprocessor');
 
 Given('I go to Zero Online Banking dashboard', () => {
-    cy.visit('http://zero.webappsecurity.com/index.html')
+    searchPage.visit()
 })
 
 When('I fill in “zero” keyword in search bar on the web', () => {
-    cy.get('#searchTerm').type('zero');
-    cy.get('.search-query').should('be.visible').click();
-    cy.visit('http://zero.webappsecurity.com/search.html?searchTerm=zero')
+    searchPage.fillSearchColumn('zero');
+    searchPage.search()
+    searchPage.result()
 })
 
 Then ('I see all features with the keyword “zero” on Zero Online Banking', () => {
