@@ -8,7 +8,10 @@ describe('Update user', () => {
         }
         cy.request('PUT', 'https://reqres.in/api/users/462', user).then((response) => {
             expect(response.status).eq(200);
-            expect(response.body.firstName).to.eq(user.firstName)
+            expect(response.body.firstName).to.eq(user.firstName);
+            expect(response.body.lastName).to.eq(user.lastName);
+            expect(response.body.job).to.eq(user.job);
+            expect(response.body.age).to.eq(user.age)
         })
     });
 })
