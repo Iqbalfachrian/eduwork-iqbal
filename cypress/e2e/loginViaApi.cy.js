@@ -1,5 +1,4 @@
 import "../support/commands"
-import "../fixtures/login.json"
 
 describe('Login via API', () => {
     before(() => {
